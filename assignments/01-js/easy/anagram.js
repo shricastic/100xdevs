@@ -5,7 +5,12 @@
 */
 
 function isAnagram(str1, str2) {
+  const format = (str) => str.toLowerCase().replace(/\s+/g, '').split('').sort().join('')
+  
+  const s1 = format(str1)
+  const s2 = format(str2)
 
+  return s1===s2
 }
 
 module.exports = isAnagram;
